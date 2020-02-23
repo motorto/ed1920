@@ -1,31 +1,39 @@
 public class Losango { 
-        static void linha(int n){
-		int m=1;
-		while(n>0){
-			n--;
-			for(int i=n/2;i>0;i--){
-				System.out.print("a");
-			}
-			for(int i=0;i<m;i++){
-				System.out.print("*");
-			}
-			for(int i=n/2;i>0;i--){
-				System.out.print("a");
-			}
-			System.out.println();
-			m+=2;
-		}
-	}	
 
         static void losango(int n){
-                int half=n/2+1;
-                int m=1;
-                for (int i=0;i<half;i++){
-                        for (int j=0;j<half-1;j++){
-                                System.out.print("a");
+                int espacos=n/2;
+                int cardinais=1;
+                for (int j=0;j<n/2+1;j++){
+                        for(int i=0;i<espacos;i++){
+                                System.out.print(" ");
                         }
-		
-	public static void main (String[] args){
-		linha(5);
-	}
+                        for(int i=0;i<cardinais;i++){
+                                System.out.print("*");
+                        }
+                        System.out.println();
+                        espacos--;
+                        cardinais+=2;
+                } 
+                cardinais-=2;
+                espacos++;
+                for(int j=0;j<n/2;j++){
+                        espacos++;
+                        cardinais-=2;
+                        for(int i=0;i<espacos;i++){
+                                System.out.print(" ");
+                        }
+                        for(int i=0;i<cardinais;i++){
+                                System.out.print("*");
+                        }
+                        System.out.println();
+                }
+
+                
+        }
+
+        public static void main (String[] args){
+                losango(7);
+        }
+
 }
+
