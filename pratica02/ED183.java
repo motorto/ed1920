@@ -16,11 +16,8 @@ public class ED183 {
                 }
                 float sum = soma;
                 float siz = size;
-                double media = sum/siz;
                 amplitude = max - min ;
-                System.out.printf("%.2f\n",media);
-                //System.out.println("Max = " + max);
-                //System.out.println("Min = " + min);
+                System.out.printf("%.2f\n",sum/size);
                 System.out.println(amplitude) ;
         }
 }

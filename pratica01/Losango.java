@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Losango { 
 
         static void losango(int n){
@@ -5,12 +7,12 @@ public class Losango {
                 int cardinais=1;
                 for (int j=0;j<n/2+1;j++){
                         for(int i=0;i<espacos;i++){
-                                System.out.print(" ");
+                                System.out.print(".");
                         }
                         for(int i=0;i<cardinais;i++){
-                                System.out.print("*");
+                                System.out.print("#");
                         }
-                        System.out.println();
+                       System.out.println();
                         espacos--;
                         cardinais+=2;
                 } 
@@ -20,19 +22,21 @@ public class Losango {
                         espacos++;
                         cardinais-=2;
                         for(int i=0;i<espacos;i++){
-                                System.out.print(" ");
+                                System.out.print(".");
                         }
                         for(int i=0;i<cardinais;i++){
-                                System.out.print("*");
+                                System.out.print("#");
                         }
-                        System.out.println();
+                       System.out.println();
                 }
 
                 
         }
 
         public static void main (String[] args){
-                losango(7);
+                Scanner ler = new Scanner(System.in);
+                int size = ler.nextInt();
+                losango(size);
         }
 
 }
