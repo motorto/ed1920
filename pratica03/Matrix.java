@@ -60,15 +60,10 @@ class Matrix {
         public Matrix multiply(Matrix m){
                 Matrix p= new Matrix(rows, m.cols);
                 for(int i=0;i<rows;i++){
-                        for(int j=0;j<m.cols;j++){
-                                int matrix=0;
-                                int linhas=0, colunas=0;
-                                while(colunas<cols){//enquanto n percorrer as colunas tds
-                                        matrix+=data[i][colunas]* m.data[linhas][j];//vai multiplicando
-                                        linhas++;//para percorrer o resto da matriz
-                                        colunas++;//para percorrer o resto da matriz
+                        for(int j=0; j<p.cols;j++){
+                                for(int k=0;k<cols;k++){
+                                        p.data[i][j]+=this.data[i][k] * m.data[k][j];
                                 }
-                                p.data[i][j]=matrix;//a matriz final vai ser o resultado da matrix
                         }
                 }
                 return p;
