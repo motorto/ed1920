@@ -43,7 +43,6 @@ class Game {
         }
 
         // Deve devolver o numero de celulas vivas que sao vizinhas de (x,y)
-        // PRIVATE
         private int countAlive(int x, int y) {
                 int count = 0;
                 for (int i=x-1;i<x+2;i++){
@@ -54,7 +53,6 @@ class Game {
                                         continue;
                                 else if (m[i][j] == 'O')
                                         count++;
-                                System.out.printf("%d %d %c %d\n",i,j,m[i][j],count);
                         }
                 }
                 return  count;
@@ -62,9 +60,27 @@ class Game {
 
         // Deve fazer uma iteracao: cria nova geracao a partir da actual
         public void iterate() {
-                //char m2[][] = new char[rows][col]; 
+                char m2[][] = new char[rows][cols]; 
+                for(int i=0;i<rows;i++){
+                        for(int j=0;j<cols;j++){
+                                if (countAlive(i,j) <=1 && m[i][j]=='O')
+                                        m2[i][j]='.';
+                                else if (countAlive(i,j) >= 4 && m[i][j]=='O')
+                                        m2[i][j] = '.';
+                                else if ((countAlive(i,j) <= 3 || countAlive(i,j) >= 2) && m[i][j]=='O')
+                                        m2[i][j] = 'O';
+                                else if (countAlive(i,j)==3 && m[i][j] == '.')
+                                        m2[i][j] = 'O';
+                                else 
+                                        m2[i][j] = '.';
+                        }
+                }
+                for (int i=0; i < rows ; i++){
+                        for (int j=0; j< cols ; j++) {
+                                m[i][j]=m2[i][j];
+                        }
+                }
         }
-
 }
 
 // Classe principal com o main()
@@ -80,9 +96,12 @@ public class ED088 {
                 // Criar objecto para conter o jogo e ler estado inicial
                 Game g = new Game(rows, cols);
                 g.read(in);
-                g.write();
-                g.countAlive(4,4);
-
                 //... por completar
+                for (int i=0;i<n;i++){
+                        g.iterate();
+                }
+                g.write();
         }
+
 }
+
