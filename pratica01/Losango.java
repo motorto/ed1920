@@ -35,6 +35,8 @@ public class Losango {
 
         public static void main (String[] args){
                 Scanner ler = new Scanner(System.in);
+		int i = new integer (42);
+		System.out.println(i);
                 int size = ler.nextInt();
                 losango(size);
         }

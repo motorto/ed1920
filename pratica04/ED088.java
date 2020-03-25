@@ -96,7 +96,6 @@ public class ED088 {
                 // Criar objecto para conter o jogo e ler estado inicial
                 Game g = new Game(rows, cols);
                 g.read(in);
-                //... por completar
                 for (int i=0;i<n;i++){
                         g.iterate();
                 }
