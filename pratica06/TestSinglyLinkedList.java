@@ -23,8 +23,7 @@ public class TestSinglyLinkedList {
 	}
 
 	System.out.println(list);
-	SinglyLinkedList newRes = list.copy();
-	System.out.println(newRes);
-	
+	SinglyLinkedList<Integer> newRes = list.copy();
+	System.out.println("LISTA COPIADA "+ newRes);
     }
 }

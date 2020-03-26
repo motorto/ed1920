@@ -129,10 +129,14 @@ public class SinglyLinkedList<T> {
        }
    }
 
+   // POR FAZER 
    public SinglyLinkedList<T> copy() {
-       SinglyLinkedList copia = new SinglyLinkedList<> ();
-       this.Node<T> cur = first;
-       copia = cur.getValue();
-       return  copia;
+       Node<T> cur = first ;
+       SinglyLinkedList<T> copia = new SinglyLinkedList<>();
+       while (cur !=null){
+	   copia.addLast(cur.getValue());
+	   cur = cur.getNext();
+       }
+       return copia;
    }
 }
