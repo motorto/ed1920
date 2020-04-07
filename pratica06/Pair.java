@@ -5,11 +5,4 @@ public class Pair {
 	x = a;
 	y = b;
     }
-    
-    public String toString() {
-	String str = "[";
-	str+=x ; str+=','; str+=y;
-	str+= "]";
-	return str;
-    }
 }
