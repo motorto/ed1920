@@ -1,3 +1,11 @@
+/*
+ *
+ * Metodo mais simples de se fazer
+ * seria , ver o topo e escolher o mais pequeno 
+ * Não me apetece voltar a fazer o exercicio 
+ *
+ */
+
 import java.util.*;
 
 public class ED197 {
