@@ -1,0 +1,54 @@
+1)                      a<b = O
+                        a>b = Ω
+                        a=b = θ
+    a)
+        f(n) = n² 
+        g(n) = n³
+        f(n) < g(n) ==> f(n) = O(g(n))
+    
+    b) 
+        f(n) = n
+        g(n) = n
+        f(n) = g(n) ==> f(n) = Θ(g(n))
+    
+    c)
+        f(n) = 2^n
+        g(n) = n²
+        f(n) > g(n) ==> f(n) = Ω(g(n))
+    
+    d)
+        f(n) = 0
+        g(n) = 0
+        f(n) = g(n) ==> f(n) = Θ(g(n))
+    
+    e)
+        f(n) = nlog(n)
+        g(n) = n²
+        f(n) < g(n) ==> f(n) = O(g(n))
+    
+    f)
+        f(n) = sqrt(n)
+        g(n) = log(n)
+        f(n) < g(n) ==> f(n) = O(g(n))
+    
+2)
+    2.1)
+    contains = θ(n)
+    add = θ(1) ,so ir ao size e adizionar uma nova posicao ?
+    remove = θ(n), no pior dos casos , pq pode percorrer todo
+    size = θ(1) ,so retorna o size
+    clear = θ(1) , meter size=0 
+    
+    2.2)
+    contains = θ(1) ir a posicao e verificar
+    add = θ(1) ir a posicao trocar o boleano
+    remove = θ(1)  ir a posicao trocar o boleano
+    size = θ(1) retornar size
+    clear θ(n) depende de n
+
+3)
+    a)
+    aumenta 8x logo é cubica
+
+    b)
+    5000*5000*5000/1200*1200*1200 * 96 = temp(5000)
