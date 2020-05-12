@@ -9,11 +9,11 @@ import java.util.*;
 public class ED201{
 
   public static int solve (int v[],int max){
+
     // Gerar Subconjunto
     if ( (Sumset > CurrentSum) && (Sumset <= max) ) CurrentSum = Sumset ;
     // Chamada recursiva
     return Sumset;
-
   }
 
   public static void main (String[] args){
