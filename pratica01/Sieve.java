@@ -1,12 +1,12 @@
 public class Sieve {
 
     // Procedimento para usar o algoritmo do Crivo de Eratóstenes
-    // [procedimento ainda por completar]
     public static void sieve(int n, boolean prime[]) {
+        // meter vetor tudo verdade
 		for(int i=0;i<=n;i++){
 			prime[i]=true;
 		}
-		 //int i=1;
+		//descobrir multiplos
 		for(int j=2;j<=n;j++){  // <--- Multiplicador (K) 
 			for (int i=2;i<=n;i++){		// <-- Avancar o numero pelo qual multiplica (Ki) 
 				if((j*i)>n){
