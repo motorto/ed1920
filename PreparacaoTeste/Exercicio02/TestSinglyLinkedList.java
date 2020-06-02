@@ -15,13 +15,7 @@ public class TestSinglyLinkedList {
       for (int i=2; i<=10; i+=2)
          list.addLast(i);
       System.out.println(list);
-      System.out.println(list.get(0));
-      System.out.println(list.get(1));
-      System.out.println(list.get(2));
-      System.out.println(list.get(3));
-      System.out.println(list.get(4));
-      System.out.println(list.get(5));
-      System.out.println(list.get(-1));
-      System.out.println(list.get(6));
+      list.duplicate();
+      System.out.println(list);
    }
 }

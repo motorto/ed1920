@@ -100,7 +100,7 @@ public class SinglyLinkedList<T> {
   /////////////////////////////
   // Metodos criados por mim //
   /////////////////////////////
-public T get(int pos) {
+  public T get(int pos) {
     Node<T> cur = first;
     if (pos < 0 ) return null;
     if (pos >= size) return null;
@@ -108,11 +108,51 @@ public T get(int pos) {
     else{
       int tmp = 0;
       while (tmp < pos){
-       cur=cur.getNext();
-       tmp++;
+        cur=cur.getNext();
+        tmp++;
       }
       return cur.getValue();
     }
   }
-  
+  public T remove(int pos){
+    if (pos < 0 || pos >= size)  return null;
+    Node<T> cur = first;
+    T reposta = cur.getValue();
+    if (pos == 0){ 
+      first = first.getNext();
+      size--;
+      return reposta;
+    }
+    int tmp = 0 ;
+    while (tmp < pos-1){
+      cur = cur.getNext();
+      tmp++;
+    }
+    reposta = cur.getNext().getValue();
+    cur.setNext(cur.getNext().getNext());
+    size--;
+    return reposta ;
+  }
+
+  public SinglyLinkedList<T> copy(){
+    SinglyLinkedList<T> a = new SinglyLinkedList<>();
+    Node<T> cur = this.first;
+    a.addFirst(cur.getValue());
+    for (int i = 1 ; i < this.size ; i++){
+      cur = cur.getNext();
+      a.addLast(cur.getValue());
+    }
+    return a;
+  }
+
+  public void duplicate(){
+    Node<T> cur = this.first;
+    while(cur != null){
+      Node<T> novo = new Node<>(cur.getValue(),cur.getNext());
+      cur.setNext(novo);
+      cur = cur.getNext().getNext();
+      size++;
+    }
+  }
+
 }
