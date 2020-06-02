@@ -7,15 +7,21 @@
 // -----------------------------------------------------------
 
 public class TestSinglyLinkedList {
-   public static void main(String[] args) {
+  public static void main(String[] args) {
 
-      // Criacao de lista de inteiros
-      SinglyLinkedList<Integer> list = new SinglyLinkedList<Integer>();
-      // Adicionando numeros de 1 a 5 ao final da lista
-      for (int i=2; i<=10; i+=2)
-         list.addLast(i);
-      System.out.println(list);
-      list.duplicate();
-      System.out.println(list);
-   }
+    // Criacao de lista de inteiros
+    SinglyLinkedList<Integer> list = new SinglyLinkedList<Integer>();
+    // Adicionando numeros de 1 a 5 ao final da lista
+    for (int i=2; i<=10; i+=2)
+      list.addLast(i);
+    list.addLast(8);
+    list.addLast(8);
+    list.addLast(1);
+    list.addLast(2);
+    list.addLast(8);
+    list.addLast(2);
+    System.out.println(list);
+    list.removeAll(2);
+    System.out.println(list);
+  }
 }
