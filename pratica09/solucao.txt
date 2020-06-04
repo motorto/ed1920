@@ -1,4 +1,5 @@
-1)                      a<b = O
+1)                       Batota   
+                        a<b = O
                         a>b = Ω
                         a=b = θ
     a)
